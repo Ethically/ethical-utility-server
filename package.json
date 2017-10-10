@@ -1,0 +1,30 @@
+{
+  "name": "ethical-utility-server",
+  "version": "0.0.0",
+  "description": "Simple promise based HTTP server for the Ethical framework.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "nutra --config ./nutra.config.js && npm run prepublish",
+    "test-debugger": "DEBUG=1 node --inspect-brk ./node_modules/.bin/nutra --config ./nutra.config.js",
+    "build": "babel src --out-dir dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethically/ethical-utility-server.git"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "curl": "^0.1.4",
+    "nutra": "0.0.13",
+    "nutra-jasmine-coverage-babel-preset": "0.0.8"
+  },
+  "dependencies": {
+    "koa": "^2.0.0",
+    "server-destroy": "^1.0.1"
+  }
+}
